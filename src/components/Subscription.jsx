@@ -2,8 +2,8 @@ export default function Subscription() {
 
   const handlePayment = () => {
     const options = {
-      key: "YOUR_KEY_ID",
-      amount: 49900,
+      key: "rzp_test_STXzPHIbayB1EE,861gtKdWTPTDcfXzkN2SFvCa",
+      amount: 499,
       currency: "INR",
       name: "IPL Predictor",
 
