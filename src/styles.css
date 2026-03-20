@@ -1,0 +1,118 @@
+/* Global Reset */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fb;
+}
+
+/* Container */
+.container {
+  padding: 16px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.navbar h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #22c55e;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Match Section */
+.match-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+/* Insights Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.grid-item {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #f1f5f9;
+}
+
+/* Highlight */
+.hot {
+  color: red;
+  font-weight: bold;
+}
+
+/* Picks */
+.picks {
+  background: #fef9c3;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+/* Subscription */
+.subscription {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.subscription button {
+  margin-top: 12px;
+  background: #22c55e;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
