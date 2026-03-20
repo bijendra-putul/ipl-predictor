@@ -8,6 +8,13 @@ export default function Subscription() {
       name: "IPL Predictor",
       description: "Premium Subscription",
 
+     method: {
+      card: true,
+      upi: false,
+      netbanking: false,
+      wallet: false
+    },
+
       handler: function () {
         alert("Payment Successful!");
         localStorage.setItem("premium", "true");
