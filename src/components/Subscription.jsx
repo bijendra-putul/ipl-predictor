@@ -40,9 +40,9 @@ export default function Subscription() {
       <h2>🔥 Premium Access</h2>
       <p>Get winning predictions</p>
 
-      <button className="btn btn-primary" onClick={handlePayment}>
+      {/* <button className="btn btn-primary" onClick={handlePayment}>
         Subscribe ₹499
-      </button>
+      </button> */}s
     </div>
   );
 }
