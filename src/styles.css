@@ -14,6 +14,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 16px;
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
@@ -115,4 +116,69 @@ th {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+.nav-link {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: green;
+}
+.right-navBar{
+    font-size: 22px;
+}
+
+
+/* Shop Title */
+.shop-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Image */
+.product-card img {
+  width: auto;
+  border-radius: 10px;
+   height: 180px;
+}
+.product-card .cardtext{
+  font-size: 14px;
+}
+
+/* Price */
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #16a34a;
+}
+
+/* Button Improve */
+.product-card button {
+  width: 100%;
 }
