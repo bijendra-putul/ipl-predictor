@@ -11,13 +11,13 @@ import { Link } from "react-router-dom";
 //   );
 // }
 
-import logo from "../assets/ipl-pr-logo.jpg";
+// import logo from "../assets/ipl-pr-logo.jpg";
 
 export default function Navbar() {
   return (
     <div className="navbar">
       <div className="logo lipl-pr-logo">
-        <img src={logo} alt="IPL Predictor" className="navbar-logo" />
+        <img src="/ipl-pr-logo.jpg" alt="IPL Predictor" className="navbar-logo" />
       </div>
 
       {/* <div className="ad-section">

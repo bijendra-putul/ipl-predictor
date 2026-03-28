@@ -10,11 +10,14 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 /* Container */
 .container {
   padding: 16px;
+  flex: 1;
 }
 
 /* Navbar */
@@ -96,6 +99,33 @@ body {
   padding: 12px;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Affiliate Sidebar */
+.affiliate-sidebar {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.affiliate-item {
+  display: block;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.affiliate-item:hover {
+  transform: scale(1.05);
+}
+
+.affiliate-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Table */
@@ -202,7 +232,7 @@ th {
 }
 
 /* Affiliate Sidebar */
-.affiliate-sidebar {
+body .app .affiliate-sidebar {
   position: fixed;
   right: 10px;
   top: 50%;
