@@ -1,24 +1,26 @@
-export default function MatchCard({ match }) {
+export default function MatchCard({ match, prediction }) {
+  const scoreSummary = match.score
+    ? match.score.map((s) => `${s.inning}: ${s.r}/${s.w} (${s.o})`).join(" | ")
+    : "No score available";
+
   return (
-    <div>
-      {/* Banner */}
-      <div className="banner">
-        <h2 className="banner-title">
-          🔥 Today's Winning Team Prediction Inside
-        </h2>
-        <p className="banner-sub">Only available before toss ⏳</p>
+    <div className="card">
+      <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+        {match.teamInfo?.map((team) => (
+          <img key={team.shortname} src={team.img} alt={team.name} width={32} height={32} style={{ borderRadius: 4 }} />
+        ))}
+        <h3 style={{ margin: 0 }}>{match.name}</h3>
       </div>
 
-      <div className="card">
-        <h2>{match.name}</h2>
-        <p className="match-status">{match.status}</p>
+      <p className="match-status">{match.status}</p>
+      <p style={{ margin: "8px 0", fontSize: 14 }}>{scoreSummary}</p>
+      <p style={{ fontWeight: "bold" }}>Prediction: {prediction || "Undecided"}</p>
 
-        <div className="match-row">
-          <span>{match.teams?.[0]}</span>
-          <span>vs</span>
-          <span>{match.teams?.[1]}</span>
-        </div>
-      </div>
+      {match.matchStarted ? (
+        <span style={{ color: "#22c55e" }}>Live Now</span>
+      ) : (
+        <span style={{ color: "#ef4444" }}>Not started</span>
+      )}
     </div>
   );
 }
