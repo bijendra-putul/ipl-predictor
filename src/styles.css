@@ -207,7 +207,7 @@ th {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 10px;
   z-index: 1000;
@@ -251,7 +251,7 @@ th {
 /* Price */
 .price {
   font-weight: bold;
-  margin: 10px 0;
+   margin: 10px 0;
   color: #16a34a;
 }
 
