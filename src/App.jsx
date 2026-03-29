@@ -60,20 +60,41 @@
 //   );
 // }
 import "./styles.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 import Shop from "./components/Shop";
-import Home from "./components/Home"; // or your main content
+import Login from "./components/Login";
+import Register from "./components/Register";
+import AdminPanel from "./components/AdminPanel";
+import UserProfile from "./components/UserProfile";
+import ProductDetail from "./components/ProductDetail";
+import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
+import Orders from "./components/Orders";
+import Terms from "./components/Terms";
+import Privacy from "./components/Privacy";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
+        <Route path="/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<ProtectedRoute><UserProfile /></ProtectedRoute>} />
+        <Route path="/admin" element={<ProtectedRoute role="admin"><AdminPanel /></ProtectedRoute>} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }

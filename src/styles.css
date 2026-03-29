@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Global Reset */
 body {
   margin: 0;
@@ -317,4 +321,9 @@ body .app .affiliate-sidebar {
 .paddsize{
 
   padding: 0 4px;
+}
+
+.logo-image-right{margin-right: 43px;}
+.cart-page table th, .adminpage table th, .orderpage table th{
+  background:#05244c;
 }
